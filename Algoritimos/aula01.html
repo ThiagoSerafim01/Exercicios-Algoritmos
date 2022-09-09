@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AULA HTML - JS 1ADSA</title>
+  </head>
+  <body>
+    <button onclick="mostrar_mensagem()">
+      POR FAVOR, CLICA AQUI SE QUISER VIVER !!!
+    </button>
+
+    Digite seu nome:
+    <input id="input_nome" />
+    Digite seu bairro:
+    <input id="input_bairro" />
+    Digite sua idade:
+    <input id="input_idade" type="number" />
+
+    <button onclick="mostrar_nome()">Mostrar nome</button>
+    <button onclick="cumprimentar()">Cumprimentar</button>
+  </body>
+</html>
+
+<script>
+  function mostrar_mensagem() {
+    alert("Olá Mundo !!!");
+  }
+
+  function mostrar_prompt() {
+    prompt("Qual sua idade ?");
+  }
+
+  function mostrar_nome() {
+    alert(input_nome.value);
+  }
+
+  function cumprimentar() {
+    alert(
+      "Olá, " + input_nome.value + ", vejo que você tem " + input_idade.value + " anos e mora no bairro " + input_bairro.value
+    );
+  }
+</script>

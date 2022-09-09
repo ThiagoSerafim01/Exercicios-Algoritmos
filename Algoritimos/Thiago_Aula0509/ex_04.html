@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Informar quantas latinhas de refrigerantes toma p/dia: <input id="input_latinhas" type="number"> <br>
+    <button onclick="quantos_refris()">Quantos refris?</button>
+    <div id="div_resultado"></div>
+</body>
+</html>
+
+<script>
+    function quantos_refris(){
+        var latinhas = Number(input_latinhas.value);
+        var qtd_porano = latinhas * 365;
+
+        div_resultado.innerHTML = ` Quantidade de latinhas que consome por ano é: ${qtd_porano}`
+
+        if (qtd_porano >= 500) {
+            div_resultado.innerHTML += ` <br> Cuide melhor da sua saúde!`
+        }
+
+    }
+</script>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span>Informar o valor da 1º Nota: </span> <input id="input_nota1" type="number"><br> 
+    <span> Informar o valor da 3º Nota: </span>  <input id="input_nota2" type="number"><br>
+    <span> Informar o valor da 2º Nota: </span> <input id="input_nota3" type="number"><br>
+
+    <button onclick="analisar_desempenho()">Analisar desempenho</button>
+    <div id="div_resultado"></div>
+
+</body>
+</html>
+
+<script>
+    function analisar_desempenho(){
+        var nota1 = Number(input_nota1.value);
+        var nota2 = Number(input_nota2.value);
+        var nota3 = Number(input_nota3.value);
+        var soma_notas = nota1 + nota2 + nota3
+        var media = soma_notas / 3
+
+        div_resultado.innerHTML = `Sua média foi de ${media.toFixed(1)}`
+        
+            if (media > 9.4 ){
+            div_resultado.innerHTML += `<br> Parabéns, você é fora de série! `
+        }
+
+
+}
+</script>

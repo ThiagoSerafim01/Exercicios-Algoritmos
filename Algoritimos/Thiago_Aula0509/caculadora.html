@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    
+    <b>Cálculo Do Absenteísmo</b> <br>
+
+    Informar a quantidade de colaboradores: <input id="input_qtdcolaboradores" type="number"> <br>
+    Informar a carga horario do dia de trabalho: <input id="input_cargahoraria" type="number"> <br>
+    Informar a quantidade de dias trabalhado ao mês: <input id="input_diasmes" type="number"> <br>
+    Informar Horas de pausas indevidas no dia: <input id="input_pausas" type="number"> <br>
+    <button onclick="calculo()">Ver taxa de abesenteísmo mensal</button>
+
+    <div id="div_absenteismo"></div>
+
+</body>
+</html>
+
+<script>
+
+    function calculo() {
+
+        var horasmes = (Number(input_qtdcolaboradores.value) * Number(input_cargahoraria.value)) * Number(input_diasmes.value);
+        var absenteismo = Number(input_qtdcolaboradores.value)  * Number(input_pausas.value);
+        var resultado = (absenteismo / horasmes) * 100;
+
+        div_absenteismo.innerHTML= `
+        O nível de absenteísmo foi de ${resultado}% em um mês.
+        
+        `
+    }
+</script>
