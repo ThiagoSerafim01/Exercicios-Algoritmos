@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potencia</title>
+</head>
+<body>
+    <h1>Potência</h1>
+    Informe um numero <br>
+    <input id="input_numero" type="number"> <br>
+
+    Informe um segundo numero <br>
+    <input id="input_segundo" type="number"> <br>
+
+    <button onclick="fazer_potencia()">Fazer potência</button>
+    <divr id="resultado"></div>
+</body>
+</html>
+
+<script>
+
+function fazer_potencia(){
+
+    var potencia= (Number(input_numero.value) ** Number(input_segundo.value))
+ 
+    resultado.innerHTML= `
+    
+    ${Number(input_numero.value)} elevado a ${Number(input_segundo.value)} dá ${potencia}
+    
+    `
+}
+
+</script>

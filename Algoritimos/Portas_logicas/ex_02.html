@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Crie um programa em HTML/JS o qual avaliará se uma pessoa tem direito à ajuda do governo:
+a) Solicite renda do usuário;
+b) Solicite a renda total familiar do usuário;
+c) Ao clicar em "Verificar ajuda", exibe um alert com uma dessas mensagens:
+   "Você terá direito!", caso a renda do usuário for até 1050 E a renda familiar for até 2100.
+   "Você NÃO terá direito", caso contrário.
+ -->
+
+            <span>Informar renda:</span>
+            <input id="input_renda" type="number"> <br>
+            <span>Informar renda total familiar:</span>
+            <input id="input_renda_familiar" type="number"> <br>
+            <button onclick="verificar_ajuda()">Verificar ajuda</button><br>
+
+</body>
+</html>
+
+<script>
+    function verificar_ajuda(){
+        var renda = Number(input_renda.value);
+        var renda_familia = Number(input_renda_familiar.value);
+
+        if (renda <= 1050 && renda_familia <=2100){
+            alert ("Você terá direito!")
+        } else {
+            alert ("Você NÃO terá direito")
+        }
+    }
+</script>

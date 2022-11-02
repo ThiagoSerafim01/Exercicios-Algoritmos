@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span>Informar um numero (tem que ser entre 20 e 100)</span>
+    <input id="input_numero" type="number"> <br>
+    <button onclick="multiplos()" >Adoro múltiplos de 5</button>
+    <div id="div_resultado"></div>
+</body>
+</html>
+
+<script>
+    function multiplos(){
+        var numero = Number(input_numero.value)
+        var mutiplos5 = 5
+        if (numero <20 || numero >100){
+            alert('Erro numero não confere com valores requerido')
+        } else { 
+        while(mutiplos5 <= numero){
+            div_resultado.innerHTML += ` ${mutiplos5} ,`
+            mutiplos5 +=5
+        }}
+    }
+</script>

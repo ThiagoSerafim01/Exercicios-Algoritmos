@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>O primeiro sistema de e-mail era um programa chamado Mailbox e ficava em computadores do Instituto de Tecnologia de Massachusetts (MIT), já em 1965. Um usuário podia deixar uma mensagem para outro, que seria visualizada na próxima vez que o segundo fizesse login na mesma máquina. Em 1969, o Departamento de Defesa dos Estados Unidos implementou a Arpanet, precursora da Internet. Nessa rede, surgiu o primeiro envio de e-mail de um computador para outro. </h4>
+
+    <span>Informar o valor de ano:</span>
+    <input id="input_ano" type="number"> <br>
+    <button onclick="ver_fato()">Ver fato</button> <br>
+    <div id="div_resultado"></div>
+</body>
+</html>
+
+<script>
+    function ver_fato(){
+        var ano = Number(input_ano.value);
+
+        if (ano < 1965){
+            div_resultado.innerHTML = `No ano ${ano} o email nem havia sido criado ainda `
+        } else if (ano == 1965){
+            div_resultado.innerHTML = `No ano ${ano}  o email estava sendo criado`
+        } else if (ano <= 1969){
+            div_resultado.innerHTML = `No ano ${ano}  o email já havia sido criado`
+        } else {
+            div_resultado.innerHTML = `No ano ${ano} o email já havia sido aprimorado - Poderia ser enviado para outro computador`
+        }
+    }
+    
+</script>

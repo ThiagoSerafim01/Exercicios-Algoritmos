@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    Temperatura: <input id="input_temperatura" /><br />
+    <button onclick="verificar_clima()">Verificar clima</button>
+    <div id="div_resultado"></div>
+  </body>
+</html>
+
+<script>
+  function verificar_clima() {
+    var temperatura = Number(input_temperatura.value);
+
+    if (temperatura < 10) {
+      div_resultado.innerHTML = `
+                Clima apropriado p/ conservar alimento
+                <img src="https://www.hipolabor.com.br/blog/wp-content/uploads/2017/06/93752-8-alimentos-nutritivos-que-ajudam-a-manter-o-bom-funcionamento-do-organismo.jpg" >
+            `;
+    } else {
+      div_resultado.innerHTML = `
+        Clima inapropriado p/ conservar alimento
+        <img src="https://images.ifato.com.br/data/noticias/1/39758/big_1529614578443a5e287e3a73fea5b247efe41e50d2.jpg">
+        `;
+    }
+  }
+</script>

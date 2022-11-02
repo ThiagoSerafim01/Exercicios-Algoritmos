@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <span>Informar a temperatura do ambiente</span>
+    <input id="input_temperatura" type="number"> <br>
+
+    <button onclick= "verificar_clima()">Verificar clima</button>
+
+    <div id="div_resultado"></div>
+</body>
+</html>
+
+<script>
+    function verificar_clima(){
+        var temp_ambiente = Number(input_temperatura.value);
+
+        if (temp_ambiente < 10 ){
+            div_resultado.innerHTML = `  Apropriada p/ conservar alimento
+            <br><img src = "https://conteudo.imguol.com.br/c/entretenimento/4d/2020/06/01/saber-quais-sao-os-grupos-de-verduras-legumes-e-frutas-ajuda-a-nao-ficar-na-mao-na-hora-de-cozinhar-1591034988656_v2_900x506.jpg.webp" alt= "imagem" width= "500px"> `
+        } else {
+            div_resultado.innerHTML = `  Inapropriada p/ conservar alimento 
+            <br><img src = "http://s2.glbimg.com/9j5W3Yvg7uJPUbC8_zrQ3vemCDM=/780x440/e.glbimg.com/og/ed/f/original/2015/12/03/mamao_podre_scot_nelson_creative_commons.jpg" alt= "imagem" width= "500px"> `
+        }
+        
+    }
+</script>

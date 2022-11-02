@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    Frequência: <input id="input_frequencia" />
+    <br />
+    <button onclick="analisar_frequencia()">Analisar Frequência</button>
+    <img
+      onclick="" 
+      style="width: 100px" 
+      id="img_aluno" 
+      src="" 
+      alt="" />
+  </body>
+</html>
+<script>
+  function analisar_frequencia() {
+    var frequencia = Number(input_frequencia.value);
+
+    if (frequencia < 75) {
+      img_aluno.src =
+        "https://thumbs.dreamstime.com/b/turista-masculino-com-trouxa-que-toma-uma-imagem-com-c%C3%A2mera-36215885.jpg";
+    } else {
+      img_aluno.src =
+        "https://www.42frases.com.br/wp-content/uploads/2021/08/frases-de-elogios-para-alunos.jpeg";
+    }
+  }
+</script>

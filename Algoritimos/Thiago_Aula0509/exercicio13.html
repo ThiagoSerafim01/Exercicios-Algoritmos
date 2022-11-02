@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular Ráiz</title>
+</head>
+<body>
+
+    <h1>Exercicio 13</h1>
+
+   <b><i>Informar um Numero:</i></b>
+   <input id="input_primeiro_numero" type="number"><br>
+
+   <b><i>Informar um Segundo Numero:</i></b>
+   <input id="input_segundo_numero" type="number"><br>
+
+   <button onclick="calcular_raiz()">Calcular Raiz</button><br>
+
+   <div id="resultado"></div>
+
+</body>
+</html>
+
+<script>
+
+    function calcular_raiz(){
+
+        var primeiro_numero = Number(input_primeiro_numero.value)
+        var segundo_numero = Number(input_segundo_numero.value)
+        var calculo_raiz = primeiro_numero ** (1/segundo_numero)
+
+        resultado.innerHTML = `
+        
+       A ${segundo_numero}º raiz de ${primeiro_numero} dá ${calculo_raiz}
+
+        `
+    }
+</script>

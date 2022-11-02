@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Excercicio 06</h1>
+    
+    <h2>Pizza</h2>
+    <h4>Informar Sabor da Pizza</h4>
+    <input id="input_sabor" ><br>
+
+    <h4>Informar Preço da Pizza em Reais</h4>
+    <input id="input_preco" type="number"> <br>
+
+    <h4>Quantas pessoas vão comer</h4>
+    <input id="input_amigos" type="number">
+    <button onclick="ver_valor()">Ver valor por amigo</button> 
+
+    <div id="resultado"></div>
+
+</body>
+</html>
+
+<script>
+
+    function ver_valor(){
+
+        var colaborador = (Number(input_preco.value) * 1.1)
+        var total = colaborador / Number(input_amigos.value)  
+
+        Number(input_preco.value)
+        resultado.innerHTML = `
+        Cada amigo vai colaborar com R$${total} para a pizza de ${input_sabor.value}.
+
+      `
+    }
+
+
+</script>

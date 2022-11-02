@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span>Informar a quantidade de títulos mundiais da FIFA que seu clube tem:</span>
+    <input id="input_qtdtitulos" type="number"> <br>
+    <button onclick="trofeus()">Ver troféus de mundiais FIFA</button>
+    <div id="div_resultado"></div>
+</body>
+</html>
+
+<script>
+    function trofeus(){
+        var qtdtitulos = Number(input_qtdtitulos.value)
+        var taca = `<img src="./taca.jpeg">`
+        if (qtdtitulos <= 0){
+            div_resultado.innerHTML = `<img src="./torcedorChorando.jpg">`
+        } else { 
+            var repedicao = 1
+            div_resultado.innerHTML =``
+            while(repedicao <= qtdtitulos){
+                div_resultado.innerHTML += `${repedicao}. ${taca} <br>`
+                repedicao +=1
+            }
+        }
+    }
+</script>

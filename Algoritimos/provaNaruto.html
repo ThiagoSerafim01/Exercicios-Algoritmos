@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- a)	Receba a quantidade de pontos de “energia” que o Naruto tem;
+
+b)	Receba a quantidade de clones desejada;
+
+c)	Receba a quantidade de clones por linha ; -->
+
+    <span>Informar a quantidade de pontos de "energia" que o Naruto tem:</span>
+    <input id="input_qtd_energia" type="number"> <br>
+    <span>Informar a quantidade de clones desejada:</span>
+    <input id="input_qtd_clones" type="number"> <br>
+    <span>Informar a quantidade de clones por linha:</span>
+    <input id="input_qtd_clones_linha" type="number"> <br>
+    <button onclick="criar_clones()">Criar clones</button>
+    <div id="div_resultado"></div>
+
+</body>
+
+</html>
+<!-- d.2) Valide se a “energia” do item a) é suficiente para criar a quantidade a quantidade de clones do item b) desejada, ou seja, o item a) tem que ser maior ou igual ao item b) multiplicado por 20. Caso contrário, emita um alerta com uma mensagem explicativa e não faça mais nada.
+
+d.3) Abaixo do botão emitir os todos os clones do Naruto, sendo que em cada linha terá somente a quantidade de clones informada no item c).
+
+OBS: Use esse endereço de imagem abaixo para criar os clones do Naruto -->
+<script>
+    function criar_clones() {
+        var qtd_energia = Number(input_qtd_energia.value);
+        var qtd_clones = Number(input_qtd_clones.value);
+        var qtd_clones_linha = Number(input_qtd_clones_linha.value);
+        var clonesMulti = qtd_clones * 20
+        var sobraenergia = clonesMulti - qtd_energia
+
+        if (qtd_energia >= 20 && qtd_energia <= 5000 &&
+            qtd_clones >= 0 && qtd_clones <= 250 &&
+            qtd_clones_linha > 0) {
+        } else {
+            alert("ERRO NA ENTRADA DE DADOS – Energia tem que ser entre 20 e 5.000. Quantidade de Clones tem que ser entre 0 e 250. Quantidade de Clones por linha tem que ser maior que 0")
+        }
+
+        if (qtd_energia >= qtd_clones * 20) { }
+        else {
+            alert("Sem energia suficiente para criar a quantidade de clones desejada")
+        }
+        var repetir = 0
+        var imagem = `<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDM-Acn3k9FkucjXDNf3y5rzPJH9q-hwmbjcJTtsnu3axdhHrCQUbqe2IT1EDDK7RlOI4&usqp=CAU" width="120px">`
+
+        while (++repetir <= qtd_clones) {
+            div_resultado.innerHTML += `${imagem} <br> ` 
+        } 
+            if(repetir <= qtd_clones_linha){
+                div_resultado.innerHTML += `${imagem} <br>`
+            } 
+
+        div_resultado.innerHTML += `
+        Energia Inicial: ${qtd_energia} <br>
+        Qtde de Clones: ${qtd_clones} <br>
+        Sobra de Energia: ${sobraenergia} <br>
+        `
+        if (sobraenergia > 1000 || qtd_clones > 50 && sobraenergia > 20) {
+            div_resultado.innerHTML += `PROVAVELMENTE VOCÊ VAI GANHAR`
+        } else if (sobraenergia > 500 || qtd_clones >= 20 && qtd_clones <= 50 && sobraenergia > 10) {
+            div_resultado.innerHTML += `A LUTA VAI SER MUITO BOA`
+        } else {
+            div_resultado.innerHTML += `TORÇA PARA O ADVERSÁRIO SER FRAQUINHO`
+        }
+    }
+</script>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Partidas que jogou: <input id="input_qtd_partidas"><br>
+    Gols marcados: <input id="input_qtd_gols"><br>
+    <button onclick="estudar_atacante()">
+        Estudar atacante
+    </button>
+    <div id="div_resultado"></div>
+</body>
+</html>
+
+<script>
+    function estudar_atacante() {
+        var gols_marcados = Number(input_qtd_gols.value)
+        var partidas_disputadas = Number(input_qtd_partidas.value)
+
+        var media = gols_marcados / partidas_disputadas
+
+        /* Vai dar bom */
+        if (media < 0.2) {
+            // Melhor mudar de posição
+        } else {
+            if (media <= 0.6) {
+                // Atacante mediano
+            } else {
+                // Atacante de futuro
+            }
+        }
+
+        /* Vai dar ruim */
+        if (media < 0.2) {
+            // Melhor mudar de posição
+        } else {
+            // Atacante mediano
+        }
+
+        if (media > 0.6) {
+            // Atacante de futuro
+        } 
+
+        /* Vai dar bom */
+        if (media > 0.6) {
+            // Atacante de futuro
+        } else {
+            if (media < 0.2) {
+                // Melhor mudar de posição
+            } else {
+                // Atacante mediano
+            }
+        }
+
+        /* Vai dar ruim */
+        if (media < 0.7) {
+            // Atacante mediano
+            if (media < 0.2) {
+                // Melhor mudar de posição
+            }
+        } else {
+            // Atacante de futuro
+        }
+
+        var resultado = "Atacante mediano";
+        if (media < 0.2) {
+            resultado = "Melhor mudar de posição";
+        } else {
+            if (media > 0.6) {
+                resultado = "Atacante de futuro";
+            }
+        }
+        alert(resultado);
+        
+    }
+</script>

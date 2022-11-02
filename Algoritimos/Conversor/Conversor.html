@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor De Bases</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body bgcolor="#008000">
+    <div id="Header">
+        <!-- CABECALHO COMEÇA AQUI  -->
+        <img src="https://www.sptech.school/assets/images/logos/sptech_logo.png" alt="Logo da SPTECH" width="200px">
+        <!-- CABECALHO TERMINA AQUI  -->
+    </div>
+    
+    <center>  
+          <h1>Conversor De Bases</h1> <br>
+          <h2>Decimal</h2>
+          <input id="input_decimal" type="number" placeholder="Digite o valor em decimal"> <br>
+          <h2>Converter para:</h2>
+          <input onclick="aparecer_octal()" type="checkbox"> 
+          <b>Octal</b> <br>
+          <div style="display: none; background-color: #dcdcdc; border-radius: 5px; padding: 5px; color: rgb(0, 0, 0); width: 15%; height: 40px; font-weight: 500;" id="octal">
+          </div> <br>
+          <input onclick="aparecer_hexa()" type="checkbox">
+          <b>Hexadecimal</b> <br>
+          <div style="display: none; background-color: #dcdcdc; border-radius: 5px; padding: 5px; color: rgb(7, 7, 7); width: 15%; height: 40px; font-weight: 500;" id="hexa"></div> <br>
+          <input onclick="aparecer_bin()" type="checkbox">
+          <b>Binário</b> <br>
+          <div style="display: none; background-color: #dcdcdc; border-radius: 5px; padding: 5px; color: rgb(5, 5, 5); width: 60%; height: 50px; font-weight: 500;" id="bin"></div> <br>
+          <button onclick="converter()">Converter</button>
+    </center>
+
+    
+</body>
+</html>
+
+<script>
+
+    function converter() {
+        
+        var decimal = Number(input_decimal.value);
+
+    let octal = decimal.toString(8);
+
+    let hexadecimal = decimal.toString(16);
+
+    let binaria = decimal.toString(2);
+
+    console.log (decimal);
+    console.log (octal);
+    console.log (hexadecimal);
+    console.log (binaria);
+
+    document.getElementById("input_decimal").innerHTML = ` ${decimal}`;
+    document.getElementById("octal").innerHTML = ` ${octal}`;
+    document.getElementById("hexa").innerHTML = ` ${hexadecimal}`;
+    document.getElementById("bin").innerHTML = ` ${binaria}`;
+
+    }
+
+    function aparecer_bin() {
+        bin.style.display = 'block'
+    }
+
+    function aparecer_hexa() {
+        hexa.style.display = 'block'
+    }
+
+    function aparecer_octal() {
+        octal.style.display = 'block'
+    }
+    document.bycolor = "#008000";
+
+
+</script>

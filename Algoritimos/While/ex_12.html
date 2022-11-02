@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span>Informar a tabuada que deseja verificar:</span>
+    <select id="select_tabuada">
+        <option value=""></option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+    </select> <br>
+    <span> Informar até que número a tabuada deve ser mutiplicada:</span>
+    <input id="input_mutiplica" type="number"> <br>
+    <button onclick="ver_tabuada()">Ver Tabuada</button>
+    <div id="div_vertabuada"></div>
+</body>
+</html>
+<script>
+    function ver_tabuada(){
+        var repeticao = 0;
+        var tabuada = select_tabuada.value;
+        var mutiplica = Number(input_mutiplica.value);
+        while (repeticao <= mutiplica){
+        var resultado = tabuada * repeticao;
+            if ((repeticao % 2) == 0) {
+                div_vertabuada.innerHTML += `<span style="color : blue">${tabuada} x ${repeticao} = ${resultado}</span> <br>`
+            } else {
+                div_vertabuada.innerHTML += `<span style="color: red">${tabuada} x ${repeticao} = ${resultado}</span> <br>`
+            }
+            repeticao += 1;
+        }
+        
+    }
+    
+</script>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span>Informar a quantidade de elefante:</span>
+    <input id="quantidade_elefantes" type="number">
+    <button onclick="atazanar()">Atazanar a médium</button>
+    <div id="div_resultado"></div>
+</body>
+</html>
+<script>
+    function atazanar(){
+        div_resultado.innerHTML = ''
+        var qtd_elefantes = (Number(quantidade_elefantes.value) * 2) -1;
+        var repeticao = 0
+        var incomodo_de_elefantes = 1
+        var qtd_incomodam = 'incomodam'
+
+        while (++repeticao < qtd_elefantes) {
+            if (repeticao % 2 == 1) {
+                div_resultado.innerHTML += `  1 elefante incomoda muita gente!<br>`
+            } else {
+                div_resultado.innerHTML += `  ${incomodo_de_elefantes += 1} elefantes, ${qtd_incomodam += ', incomodam'}, muito mais! <br>`
+            }
+
+        }
+
+    }
+</script>

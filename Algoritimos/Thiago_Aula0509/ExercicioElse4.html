@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span>Informar o valor da pizza:</span>
+    <input id="input_valor" type="number"> <br>
+    <span>Informar a quantidade de amigos:</span>
+    <input id="input_qtd_amigos" type="number"> <br>
+    <span>Informar valor que cada amigo pode pagar </span>
+    <input id="input_valor_amigo" type="number">
+    <button onclick="rola_a_pizza()">Rola a pizza?</button>
+    <div id="div_resultado"></div>
+</body>
+</html>
+<!-- if não precisa do else -->
+<!-- else = Se não 
+else precisa do if -->
+<script>
+    function rola_a_pizza(){
+        var valor_pizza = Number(input_valor.value);
+        var qtd_amigos = Number(input_qtd_amigos.value);
+        var valor_poramigo = Number(input_valor_amigo.value)
+        var valor_pessoa = valor_pizza / qtd_amigos;
+
+        div_resultado.innerHTML = `Cada amigo vai pagar R$${valor_pessoa.toFixed(2)} pela pizza`
+
+        if (valor_pessoa > valor_poramigo ){
+            div_resultado.innerHTML += `<br>Deu ruim! Pizza muito cara!`
+        } else {
+            div_resultado.innerHTML += `<br>Uhu! Vamos pedir a pizza!`
+        }
+    
+
+    }
+</script>

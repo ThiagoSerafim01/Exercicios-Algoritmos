@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- a) Numa combo pergunte o que ele come no café da manhã, tendo as opções:
+    ovos
+    leite de arroz
+    bacon
+b) Numa outra combo pergunte o que ele come no almoço, tendo as opções:
+    bife
+    hamburger de soja
+    frango grelhado
+c) Numa outra combo pergunte o que ele come na janta, tendo as opções:
+    picanha de soja
+    cupim
+    coração
+
+d) Ao clicar no botão "Sou vegano ?", aparece um alert com uma dessas frases:
+    "Sim, você é vegano!", caso ele consuma leite de arroz no café, hamburger de soja no almoço e picanha de soja na janta.
+    "Não, você não é vegano", caso contrário.
+ -->
+        <span>Informar a refeição que come no café da manhã:</span>
+        <select id="refeicao_manha">
+            <option value=""></option>
+            <option value="1">Ovos</option>
+            <option value="2">Leite de arroz</option>
+            <option value="3">Bacon</option>
+        </select> <br>
+
+        <span>Informar o que come no almoço:</span>
+        <select id="ref_almoco">
+            <option value=""></option>
+            <option value="4">Bife</option>
+            <option value="5">Hamburger</option>
+            <option value="6">Frango grelhado</option>
+        </select> <br>
+
+        <span>Informar o que come na janta:</span>
+        <select id="ref_janta">
+            <option value=""></option>
+            <option value="7">Picanha</option>
+            <option value="8">Cupim</option>
+            <option value="9">Coração</option>
+        </select> <br>
+
+        <button onclick="sou_vegano()" >Sou vegano ?</button>
+
+</body>
+</html>
+
+<script>
+    function sou_vegano(){
+        var manha = refeicao_manha.value;
+        var almoco = ref_almoco.value;
+        var janta = ref_janta.value;
+
+        if (manha == 2 && almoco == 5 && janta == 7 ){
+            alert ("Sim, você é vegano!")
+        } else {
+            alert ("Não, você não é vegano")
+        }
+    }
+</script>

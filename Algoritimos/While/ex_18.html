@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="input_qtd_onibus">Informar quantos onibus precisa pegar:</label>
+    <input id="input_qtd_onibus" type="number"> <br>
+    <label for="input_qtd_trens">Quantos trens precisa pegar:</label>
+    <input id="input_qtd_trens" type="number"> <br>
+    <label for="input_qtd_metro">Informar a quatidade de metro que precisa pegar:</label>
+    <input id="input_qtd_metro" type="number"> <br>
+    <button onclick="trajeto()">#Partiu Trajeto</button>
+    <div id="div_resultado"></div>
+</body>
+</html>
+
+<script>
+    function trajeto(){
+        var qtd_onibus = Number(input_qtd_onibus.value);
+        var qtd_trens = Number(input_qtd_trens.value);
+        var qtd_metro = Number(input_qtd_metro.value); 
+        var contador = 1
+        var comecandoACancar = false
+        var cansado = false
+
+        while(contador <= qtd_onibus){
+            div_resultado.innerHTML += `
+            <span style="color: red;"> Pegando o ${contador}º busão </span><br>
+            `
+            contador++
+        }
+        contador = 1;
+        while (contador <= qtd_trens){
+            div_resultado.innerHTML += `
+            <span style="color: green;"> Pegando o ${contador}º trem </span><br>
+            `
+            contador++
+        }
+        contador = 1;
+        while (contador <= qtd_metro){
+            div_resultado.innerHTML += `
+            <span style="color: blue;"> Pegando o ${contador}º metro </span><br>
+            `
+            contador++
+        }
+
+        
+    }
+</script>

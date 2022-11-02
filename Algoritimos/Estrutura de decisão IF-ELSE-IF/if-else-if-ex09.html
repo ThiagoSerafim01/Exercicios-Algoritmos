@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>  
+    Você já clicou <span id="contagem"> 0 </span> vezes <br>
+    <button onclick="clica_aqui()"><h4>Clica aqui</h4></button> 
+    <div id="div_resultado"></div>
+</body> 
+</html>
+
+<script>
+    var contagem_habilidade = 0;
+
+    function clica_aqui(){
+        contagem_habilidade += 1;
+        contagem.innerHTML = contagem_habilidade
+
+        if(contagem_habilidade < 5){
+           div_resultado.innerHTML =
+            `Dedo fraquinho, hein `
+        } else if (contagem_habilidade <= 10){
+            div_resultado.innerHTML = `Na média - não me impressiona ...`
+        } else if (contagem_habilidade <= 15){
+            div_resultado.innerHTML = `Está treinando em casa !`
+        } else {
+            div_resultado.innerHTML = `Mestre dos cliques !!!`
+        }
+    }
+</script>

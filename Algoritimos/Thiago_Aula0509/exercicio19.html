@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exercicio19</h1>
+    Porções de pão francês: <u id="pao">0</u><br>
+    Porções de carne bolvina: <u id="carne">0</u> <br>
+    Porções de carne de soja: <u id="soja">0</u> <br>
+    Porções de arroz com feijão: <u id="arroz">0</u> <br>
+   <b> Total de calorias:</b> <u id="calorias">0</u> <br>
+
+    <button onclick="calcular_pao()">Comer um Pão Françês</button> <br>
+    <button onclick="calcular_carne()">Comer Carne</button> <br>
+    <button onclick="calcular_carne_soja()">Comer Carne de soja</button> <br>
+    <button onclick="calcular_arroz()">Comer Arroz</button> <br>
+    <button onclick="recomecar()">Recomeçar</button> <br>
+
+</body>
+</html>
+
+<script>
+
+    var total_calorias = 0;
+
+    var pao_frances = 0;
+
+
+    function calcular_pao() {
+
+        pao_frances += 1
+        total_calorias += 50 
+
+        pao.innerHTML = pao_frances
+        calorias.innerHTML = total_calorias
+
+    }
+
+    function recomecar(){
+        total_calorias = 0
+        pao_frances = 0
+
+        calorias.innerHTML = total_calorias
+        pao.innerHTML = pao_frances
+    }
+
+
+</script>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span>Informar sua idade:</span>
+    <input  onkeyup="transformacoes()" id="input_idade" type="number">
+    <div id="div_resultado"></div>
+</body>
+</html>
+<script>
+    function transformacoes(){
+        var repeticao = 0
+        var idade = Number(input_idade.value);
+        div_resultado.innerHTML = ``
+        while(repeticao <= idade){
+            if (repeticao >=0 &&
+                repeticao <=4 ){
+                    div_resultado.innerHTML += `${repeticao} - (Primeira Infância) <br>`
+                } else if (repeticao <=6){
+                    div_resultado.innerHTML += `${repeticao} - (Pré-escolar) <br>`
+                } else if (repeticao <=10){
+                    div_resultado.innerHTML += `${repeticao} - (Segunda Infância) <br>`
+                } else if (repeticao <=18){
+                    div_resultado.innerHTML += `${repeticao} - (Adolescência) <br>`
+                } else if (repeticao <=50){
+                    div_resultado.innerHTML += `${repeticao} - (Adulto) <br>`
+                } else if (repeticao <=100){
+                    div_resultado.innerHTML += `${repeticao} - (Melhor idade) <br>`
+                } else {
+                    div_resultado.innerHTML += `${repeticao} - (Ancião) <br>`
+                }
+            repeticao += 1    
+        }
+
+    }
+</script>

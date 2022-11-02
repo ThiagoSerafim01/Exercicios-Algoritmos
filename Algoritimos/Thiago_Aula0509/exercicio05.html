@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+</head>
+<body>
+    <h1>Exercicio05</h1>
+        <b>Tabuada</b>
+    <input id ="input_tabuada" type="number"/>
+
+    <button onclick="Ver_tabuada()">Ver tabuada</button> 
+
+    <div id="resultado"></div>
+     
+</body>
+</html>
+
+<script>
+
+function Ver_tabuada(){
+
+    var multi = Number(input_tabuada.value);
+
+    resultado.innerHTML= ` 
+    ${multi} x 1 = ${multi *1}<br>  
+    ${multi} x 2 = ${multi *2}<br>
+    ${multi} x 3 = ${multi *3}<br>
+    ${multi} x 4 = ${multi *4}<br>
+    ${multi} x 5 = ${multi *5}<br>
+    ${multi} x 6 = ${multi *6}<br>
+    ${multi} x 7 = ${multi *7}<br>
+    ${multi} x 8 = ${multi *8}<br>
+    ${multi} x 9 = ${multi *9}<br>
+    ${multi} x 10 = ${multi *10}<br>
+
+    `
+} 
+
+
+</script>

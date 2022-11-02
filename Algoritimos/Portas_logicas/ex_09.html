@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--  Crie um programa em HTML/JS o qual:
+OBS: Use, necessariamente pelo menos um "ou" (||)
+a) Pergunte numa combo o tipo de arroz usado (integral ou branco);
+b) Pergunte o tempo de cozimento, em minutos;
+c) Pergunte a quantidade de sal usada, em gramas;
+d) Ao clicar em "Avaliar arroz", exiba, abaixo dele...
+    A frase "Arroz perfeito", caso:
+      Em caso de arroz branco, 10 minutos e até 10g de sal;
+      Em caso de arroz integral, 20 minutos e até 15g de sal;
+   A frase "Seu arroz não está perfeito", caso nenhum dos critérios anteriores tenha sido alcançado
+e) No caso de arroz perfeito, exiba também a imagem de um belo arroz, branco ou integral, conforme o tipo selecionado. Caso contrário, exiba a cara do Jacquin bravo (aquele famoso meme), independe do tipo de arroz.
+ -->
+
+  <span>Infofmar o tipo de Arroz que consome:</span>
+  <select id="select_tipo_de_arroz">
+      <option value=""></option>
+      <option value="1">Integral</option>
+      <option value="2">Branco</option>
+  </select> <br>
+  <span>Informar o tempo de cozimento do arroz (em minutos):</span>
+  <input id="input_tempo_cozimento" type="number"> <br>
+  <span>Infoemar a quantidade de sal usada (em gramas):</span>
+  <input id="input_qtd_sal" type="number"> <br>
+  <button onclick="avaliar_arroz()">Avaliar arroz</button> <br>
+  <div id="div_resultado"></div>
+
+</body>
+</html>
+
+<script>
+    function avaliar_arroz(){
+        var tipo_arroz = Number(select_tipo_de_arroz.value);
+        var tempo_cozimento = Number(input_tempo_cozimento.value);
+        var qtd_sal = Number(input_qtd_sal.value);
+
+        if(tipo_arroz == 2 && tempo_cozimento == 10 && qtd_sal <=10 || 
+           tipo_arroz == 1 && tempo_cozimento == 20 && qtd_sal <=15 ){
+
+            div_resultado.innerHTML = `Arroz perfeito <br> <img src="https://img.itdg.com.br/tdg/images/recipes/000/000/770/323683/323683_original.jpg?w=1200" width="250px">`
+           } else {
+            div_resultado.innerHTML = `Seu arroz não está perfeito <br> <img src="https://noticiasdatv.uol.com.br/media/uploads/erick-jacquin-freezer-bronca-pesadelo-na-cozinha-reproducao-band-min.jpg" width="500px">`
+           }
+    }
+</script>

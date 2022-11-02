@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <label for="input_pessoas_carro">Quantas pessoas vão entrar no carro:</label>
+    <input id="input_pessoas_carro" type="number">
+
+    <button onclick="carona()">#Partiu Carona</button>
+
+    <div id="div_resultado" ></div>
+</body>
+</html>
+
+<script>
+    function carona(){
+        var pessoas_carro = Number(input_pessoas_carro.value);
+        var repeticao = 1
+
+        div_resultado.innerHTML = `Entrou o 1º passageiro (que é o(a) motorista) <br>`
+        while (++repeticao <= pessoas_carro){
+            if (repeticao <= 5){
+               div_resultado.innerHTML += `Entrou o ${repeticao} passageiro <br>`
+            } else {
+                div_resultado.innerHTML += ` O ${repeticao} passageiro terá que esperar! <br>`
+            }
+        }
+
+    }
+</script>

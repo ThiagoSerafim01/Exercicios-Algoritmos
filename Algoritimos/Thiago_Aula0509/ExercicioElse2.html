@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span>Informar o saldo da sua conta</span>
+    <input id="input_saldo_conta" type="number"> <br>
+
+    <span>Informar o valor a tirar da conta</span>
+    <input id="input_valor_tirar" type="number"> <br>
+
+    <button onclick="analisar_conta()">Analisar conta</button>
+    <div id="div_resultado"></div>
+</body>
+</html>
+
+<script>
+    function analisar_conta(){
+        var saldo = Number(input_saldo_conta.value);
+        var valor_a_tirar = Number(input_valor_tirar.value);
+
+        var subtracao = saldo - valor_a_tirar
+
+        div_resultado.innerHTML =  `O saldo atual da conta corrente é ` 
+
+        if(subtracao < 0 ){
+            div_resultado.innerHTML += `<b style= "color: red;"> ${subtracao.toLocaleString("pt-BR", {style: "currency", currency: "BRL", maximumFractionDigits: 2})} </b> `
+        } else {
+            div_resultado.innerHTML += `<i style= "color: blue;"> ${subtracao.toLocaleString("pt-BR", {style: "currency", currency: "BRL", maximumFractionDigits: 2})} </i> `
+        }
+    }
+</script>

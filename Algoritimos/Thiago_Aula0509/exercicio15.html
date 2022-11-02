@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>compra de um carro</title>
+</head>
+
+<body>
+
+    <h1>Exercicio15</h1>
+    <b><i>Carro financiado</i></b><br>
+
+    <i>Informar o valor do carro a vista</i><br>
+    <input id="input_valor" type="number"><br>
+
+    <i>Informar a taxa de juros (ao mês)</i><br>
+    <input id="input_taxa" type="number"><br>
+
+    <i>Solicite a quantidade de parcelas</i><br>
+    <input id="input_parcela" type="number"><br>
+    
+
+    <button onclick="calcular_preju()">Calcular prejú</button>
+    <div id="resultado"></div>
+
+</body>
+
+</html>
+
+<script>
+    function calcular_preju() {
+
+        var valor_carro = Number(input_valor.value);
+        var juros_carro = Number(input_taxa.value);
+        var parcela = Number(input_parcela.value);
+
+        var juros_calculo = (juros_carro/100) + 1 ;
+        var parcela_juroscarro = valor_carro * juros_calculo;
+
+        var carro_desvalorizado = (valor_carro * 0.8) / parcela;
+
+        var carros_pagos = parcela_juroscarro / valor_carro;
+
+        resultado.innerHTML = 
+            `Seu carro vai sair por um total de <B>R$${parcela_juroscarro}.</B> Após 1 mês, ele já vai valer só <b>R$${carro_desvalorizado}.</b> Porque comprou financiado, vai pagar o correspondente a <b>${carros_pagos}</b> carros; `
+
+    }
+</script>

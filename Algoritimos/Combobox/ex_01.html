@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="meses">
+        <option value=""></option>
+        <option value="1">Janeiro</option>
+        <option value="2">Fevereiro</option>
+        <option value="3">Março</option>
+        <option value="4">Abril</option>
+        <option value="5">Maio</option>
+        <option value="6">Junho</option>
+        <option value="7">Julho</option>
+        <option value="8">Agosto</option>
+        <option value="9">Setembro</option>
+        <option value="10">Outubro</option>
+        <option value="11">Novembro</option>
+        <option value="12">Dezembro</option>
+
+    
+     </select> <br>
+
+     <button onclick="ver_estacao()">Ver Estação</button>
+
+     <div id="div_resultado"></div>
+    
+</body>
+</html>
+
+<script>
+    function ver_estacao(){
+        var estacao = meses.value
+        var Primavera_mes = `<img src = "https://thumbs.dreamstime.com/b/borboletas-na-primavera-39032655.jpg" width= "600px">`
+        var Inverno_mes = `<img src = "https://st2.depositphotos.com/1814366/5882/i/450/depositphotos_58822525-stock-photo-winter-nature-landscape.jpg" width= "600px">`
+        var Verao_mes = `<img src = "https://s1.static.brasilescola.uol.com.br/galeria/images/2d28fe1a3b1ed960bca2e3798803c6b5.jpg" width= "600px">`
+        var Outono_mes = `<img src = "https://st.depositphotos.com/2726735/3242/i/600/depositphotos_32426959-stock-photo-autumn-park.jpg" width= "600px">`
+
+        if (estacao == 1){
+            div_resultado.innerHTML = `Inverno  <br> ${Inverno_mes}` 
+        } else if(estacao == 2){
+            div_resultado.innerHTML = `Inverno <br> ${Inverno_mes}`
+        } else if (estacao == 3){
+            div_resultado.innerHTML = `Primavera <br> ${Primavera_mes}`
+        } else if (estacao == 4){
+            div_resultado.innerHTML = `Primavera <br> ${Primavera_mes}`
+        } else if (estacao == 5){
+            div_resultado.innerHTML = `Primavera <br> ${Primavera_mes}`
+        } else if (estacao == 6){
+            div_resultado.innerHTML = `Verão <br> ${Verao_mes}`
+        } else if (estacao == 7){
+            div_resultado.innerHTML = `Verão <br> ${Verao_mes}`
+        } else if (estacao == 8){
+            div_resultado.innerHTML = `Verão <br> ${Verao_mes}`
+        } else if (estacao == 9){
+            div_resultado.innerHTML = `Outono <br> ${Outono_mes}`
+        } else if (estacao == 10){
+            div_resultado.innerHTML = `Outono <br> ${Outono_mes}`
+        } else if (estacao == 11){
+            div_resultado.innerHTML = `Outono <br> ${Outono_mes}`
+        } else {
+            div_resultado.innerHTML = `Inverno <br> ${Inverno_mes}`
+        }
+    }
+</script>

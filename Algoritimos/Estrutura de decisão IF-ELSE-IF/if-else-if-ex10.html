@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="nota_atulizada1()">Nota 1</button> <br>
+    <button onclick="nota_atulizada2()">Nota 2</button> <br>
+    <button onclick="nota_atulizada3()">Nota 3</button> <br>
+    <button onclick="nota_atulizada4()">Nota 4</button> <br>
+    <button onclick="nota_atulizada5()">Nota 5</button> <br>
+    Sua avaliação: <b id="media"> 0 </b>
+
+    <img id="imagem" src="">
+
+</body
+</html>
+
+<script>
+
+    var notas = 0 
+    var clicadas = 0
+    var media_global = 0
+
+    function calcular_media(){
+        media.innerHTML = `${media_global.toFixed(1)} <br>`
+    }
+
+
+    function nota_atulizada1(){
+        notas += 1
+        clicadas += 1
+        media_global = notas / clicadas;
+        calcular_media()
+
+        if(media_global <2){
+        media.innerHTML = `${media_global.toFixed(1)} <br>
+        <img src = "https://3.bp.blogspot.com/-LWKSq1sYGUw/UnW5z6dogJI/AAAAAAABWBY/lZWZkFXvH2I/w1200-h630-p-k-no-nu/tobey-maguire-chorando-filme-homem-aranha.jpg" width= "300px"> ` 
+        } else if(media_global <= 3){
+        media.innerHTML = `${media_global.toFixed(1)} <br>
+        <img src = "https://pm1.narvii.com/7122/82f0a0cf784d86ceded9ffb3d569f6da85a8b5d9_hq.jpg" width= "600px"> `
+        } else if (media_global <= 4.5){
+            media.innerHTML =  `${media_global.toFixed(1)} <br>
+        <img src = "http://s2.glbimg.com/SsUcEcPWrCaEPD7UrWig6V31dW8=/e.glbimg.com/og/ed/f/original/2014/10/23/walk-to-work-guy-in-suit-jumping-outside-office.jpg" width= "300px"> `
+    } else {
+        media.innerHTML = `${media_global.toFixed(1)} <br>
+        <img src = "https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/blte8f58717a1fb7c35/61a2c34f3e3c9358a88ac48f/taca_libertadores_2021_palmeiras.jpg" width= "600px"> `
+        }
+    
+    
+    }
+        
+    
+
+    function nota_atulizada2(){
+        notas += 2
+        clicadas += 1
+        media_global = notas / clicadas;
+
+        if(media_global <2){
+        media.innerHTML = `${media_global.toFixed(1)} <br>
+        <img src = "https://3.bp.blogspot.com/-LWKSq1sYGUw/UnW5z6dogJI/AAAAAAABWBY/lZWZkFXvH2I/w1200-h630-p-k-no-nu/tobey-maguire-chorando-filme-homem-aranha.jpg" width= "300px"> ` 
+        } else if(media_global <= 3){
+        media.innerHTML = `${media_global.toFixed(1)} <br>
+        <img src = "https://pm1.narvii.com/7122/82f0a0cf784d86ceded9ffb3d569f6da85a8b5d9_hq.jpg" width= "600px"> `
+        } else if (media_global <= 4.5){
+            media.innerHTML =  `${media_global.toFixed(1)} <br>
+        <img src = "http://s2.glbimg.com/SsUcEcPWrCaEPD7UrWig6V31dW8=/e.glbimg.com/og/ed/f/original/2014/10/23/walk-to-work-guy-in-suit-jumping-outside-office.jpg" width= "300px"> `
+    } else {
+        media.innerHTML = `${media_global.toFixed(1)} <br>
+        <img src = "https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/blte8f58717a1fb7c35/61a2c34f3e3c9358a88ac48f/taca_libertadores_2021_palmeiras.jpg" width= "600px"> `
+        }
+    }
+
+    function nota_atulizada3(){
+        notas += 3
+        clicadas += 1
+        media_global = notas / clicadas;
+        
+        if(media_global <2){
+        media.innerHTML = `${media_global.toFixed(1)} <br>
+        <img src = "https://3.bp.blogspot.com/-LWKSq1sYGUw/UnW5z6dogJI/AAAAAAABWBY/lZWZkFXvH2I/w1200-h630-p-k-no-nu/tobey-maguire-chorando-filme-homem-aranha.jpg" width= "300px"> ` 
+        } else if(media_global <= 3){
+        media.innerHTML = `${media_global.toFixed(1)} <br>
+        <img src = "https://pm1.narvii.com/7122/82f0a0cf784d86ceded9ffb3d569f6da85a8b5d9_hq.jpg" width= "600px"> `
+        } else if (media_global <= 4.5){
+            media.innerHTML =  `${media_global.toFixed(1)} <br>
+        <img src = "http://s2.glbimg.com/SsUcEcPWrCaEPD7UrWig6V31dW8=/e.glbimg.com/og/ed/f/original/2014/10/23/walk-to-work-guy-in-suit-jumping-outside-office.jpg" width= "300px"> `
+    } else {
+        media.innerHTML = `${media_global.toFixed(1)} <br>
+        <img src = "https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/blte8f58717a1fb7c35/61a2c34f3e3c9358a88ac48f/taca_libertadores_2021_palmeiras.jpg" width= "600px"> `
+        }
+    }
+
+    function nota_atulizada4(){
+        notas += 4
+        clicadas += 1
+        media_global = notas / clicadas;
+       
+        if(media_global <2){
+        media.innerHTML = `${media_global.toFixed(1)} <br>
+        <img src = "https://3.bp.blogspot.com/-LWKSq1sYGUw/UnW5z6dogJI/AAAAAAABWBY/lZWZkFXvH2I/w1200-h630-p-k-no-nu/tobey-maguire-chorando-filme-homem-aranha.jpg" width= "300px"> ` 
+        } else if(media_global <= 3){
+        media.innerHTML = `${media_global.toFixed(1)} <br>
+        <img src = "https://pm1.narvii.com/7122/82f0a0cf784d86ceded9ffb3d569f6da85a8b5d9_hq.jpg" width= "600px"> `
+        } else if (media_global <= 4.5){
+            media.innerHTML =  `${media_global.toFixed(1)} <br>
+        <img src = "http://s2.glbimg.com/SsUcEcPWrCaEPD7UrWig6V31dW8=/e.glbimg.com/og/ed/f/original/2014/10/23/walk-to-work-guy-in-suit-jumping-outside-office.jpg" width= "300px"> `
+    } else {
+        media.innerHTML = `${media_global.toFixed(1)} <br>
+        <img src = "https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/blte8f58717a1fb7c35/61a2c34f3e3c9358a88ac48f/taca_libertadores_2021_palmeiras.jpg" width= "600px"> `
+        }
+    }
+    
+
+    function nota_atulizada5(){
+        notas += 5
+        clicadas += 1
+        media_global = notas / clicadas;
+        
+        if(media_global <2){
+        media.innerHTML = `${media_global.toFixed(1)} <br>
+        <img src = "https://3.bp.blogspot.com/-LWKSq1sYGUw/UnW5z6dogJI/AAAAAAABWBY/lZWZkFXvH2I/w1200-h630-p-k-no-nu/tobey-maguire-chorando-filme-homem-aranha.jpg" width= "300px"> ` 
+        } else if(media_global <= 3){
+        media.innerHTML = `${media_global.toFixed(1)} <br>
+        <img src = "https://pm1.narvii.com/7122/82f0a0cf784d86ceded9ffb3d569f6da85a8b5d9_hq.jpg" width= "600px"> `
+        } else if (media_global <= 4.5){
+            media.innerHTML =  `${media_global.toFixed(1)} <br>
+        <img src = "http://s2.glbimg.com/SsUcEcPWrCaEPD7UrWig6V31dW8=/e.glbimg.com/og/ed/f/original/2014/10/23/walk-to-work-guy-in-suit-jumping-outside-office.jpg" width= "300px"> `
+    } else {
+        media.innerHTML = `${media_global.toFixed(1)} <br>
+        <img src = "https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/blte8f58717a1fb7c35/61a2c34f3e3c9358a88ac48f/taca_libertadores_2021_palmeiras.jpg" width= "600px"> `
+        }
+    }
+
+</script>

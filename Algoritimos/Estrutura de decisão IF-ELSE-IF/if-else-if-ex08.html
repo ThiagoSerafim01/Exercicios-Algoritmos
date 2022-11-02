@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span>Informar quantos pães franceses tem comido por dia</span>
+    <input id="input_paes" type="number"> <br>
+    <span>Informar quantos pacotes de bolacha recheada tem comido por dia</span>
+    <input id="input_bolacha" type="number"> <br>
+    <span>Informar quantos copos de achocolatado tem tomado por dia</span>
+    <input id="input_achocolatado" type="number"> <br>
+    <button onclick="verificar_calorias()">Verificar calorias</button>
+    <div id="div_resultado"></div>
+</body>
+</html>
+
+<script>
+    function verificar_calorias(){
+        var paes = Number(input_paes.value);
+        var bolacha = Number(input_bolacha.value);
+        var achocolatado = Number(input_achocolatado.value);
+
+        var calorias_paes = paes * 50;
+        var calorias_bolacha = bolacha * 80;
+        var calorias_achocolatado = achocolatado * 70;
+        var soma_calorias = calorias_achocolatado + calorias_bolacha + calorias_paes
+
+        if (soma_calorias < 200){
+            div_resultado.innerHTML = `Está perdendo peso`
+        } else if (soma_calorias <400){
+            div_resultado.innerHTML = `Nem lá, nem cá. Vai manter a forma`
+        } else {
+            div_resultado.innerHTML = `Forte tendência á ganhar peso !`
+        }
+    }
+</script>

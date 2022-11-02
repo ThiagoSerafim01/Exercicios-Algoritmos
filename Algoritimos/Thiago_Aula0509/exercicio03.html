@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exercicio03</h1>
+Informe quantas horas de sono dormida:
+<br>
+<input id= "input_sono" type= "number"/>
+
+<Button onclick="calcular_sono()">Calcular Sono</Button>
+
+<div id="resultado">
+    
+</div>
+
+</body>
+</html>
+
+<script>
+
+function calcular_sono() {
+  resultado.innerHTML= `
+  Ao dormir <u>${input_sono.value}</u> Horas, você dormiu:<br>
+  <u>${Number(input_sono.value) *0.05}</u> Horas na <b>fase 1</b><br>
+  <u>${Number(input_sono.value) *0.45}</u> Horas na <b>fase 2</b><br>
+  <u>${Number(input_sono.value) *0.30}</u> Horas na <b>fase 3</b><br>
+  <u>${Number(input_sono.value) *0.20}</u> Horas na <b>fase REM</b>
+  `
+}
+
+        </script>

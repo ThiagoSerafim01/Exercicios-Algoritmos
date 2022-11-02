@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span>Informar um numero:</span>
+    <input id="input_numero" type="number"> <br>
+    <span>Informar uma frase:</span>
+    <input id="input_frase" type="text">
+    <button onclick="papagaio()">Papagaio</button>
+</body>
+</html>
+
+<script>
+    function papagaio(){
+        var numero = Number(input_numero.value);
+        var frase = input_frase.value;
+        var repeticao = 1;
+        if(frase.length < 3){
+            alert("Erro Frase tem que ter mais de 3 Letras.")
+        } else {
+            while(repeticao <= numero ){
+                alert(frase)
+                repeticao += 1
+            }
+        }
+
+    }
+</script>

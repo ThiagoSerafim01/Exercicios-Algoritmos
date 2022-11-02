@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Renato é aluno SPTECH e bolou um critério para indicar  quais empresa tem preferência em ir trabalhar. Seus critérios são: 
+
+A bolsa deve ser pelo menos 1800 ou o VR pelo menos R$ 20,00 ou deve ficar a, no máximo, 30 minutos de tempo de deslocamento da faculdade. 
+
+Se um desses 3 critérios for ok, a empresa está entre suas preferências. Assim, crie um programa em HTML/JS o qual:
+
+a) Solicite o nome da empresa;
+b) Solicite o valor da bolsa da empresa;
+c) Solicite o valor do VR da empresa;
+d) Solicite o tempo de deslocamento da empresa para a SPTECH;
+e) Ao clicar em "É preferida?", mostre uma dessas mensagens na própria página, abaixo do botão:
+   "A empresa X é uma de suas preferências", caso a empresa atenda aos critérios aqui explicados;
+   "A empresa X está fora da sua lista", caso contrário; -->
+
+        <span>Informar o nome da empresa:</span>
+        <input id="input_nome" type="text"> <br>
+        <span>Informar o valor da bolsa da empresa:</span>
+        <input id="input_valor_bolsa" type="number"> <br>
+        <span>Informar o valor do VR da empresa:</span>
+        <input id="input_valor_vr" type="number"> <br>
+        <span>Informar o tempo de deslocamento da empresa para a SPTECH </span>
+        <input id="input_tempo_deslocamento" type="number"> <br>
+
+        <button onclick="preferida()">É preferida</button> <br>
+        <div id="div_resultado"></div>
+</body>
+</html>
+        <script>
+            function preferida(){
+                var nome = input_nome.value;
+                var bolsa_valor = Number(input_valor_bolsa.value);
+                var valor_vr = Number(input_valor_vr.value)
+                var deslocamento = Number(input_tempo_deslocamento.value)
+
+                if(bolsa_valor >= 1800 || valor_vr >= 20 || deslocamento <= 30){
+                    div_resultado.innerHTML = `A empresa ${nome} é uma de suas preferências`
+                } else {
+                    div_resultado.innerHTML = `A empresa ${nome} está fora da sua lista`
+                }
+
+            }
+        </script>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Crie um programa em HTML/JS que avalie o desempenho de um aluno, o qual:
+a) Solicite a nota e a frequência do aluno;
+b) Ao clicar em "Analisar aluno", faça as seguintes ações:
+c) Caso a nota não seja válida, ou seja, caso não esteja entre 0 e 10, exiba um alert "Onde já se viu nota <0 ou >10?!" e limpe qualquer outro resultado que já estiver aparecendo na tela;
+d) Caso a frequência não seja válida, ou seja, caso não esteja entre 0 e 100, exiba um alert "Onde já se viu frequência <0 ou >100?!" e limpe qualquer outro resultado que já estiver aparecendo na tela;
+e) Caso os valores de nota e frequência estejam corretos, exiba:
+"Aluno ficou abaixo da média": Caso a nota estiver entre 0 e menor que 6;
+"Aluno ficou da média": Caso a nota estiver entre 6 e 8;
+"Aluno acima da média": Caso a nota estiver entre mais que 8 e 10;
+"Aluno aprovado por frequência": Caso o aluno tiver frequência a partir de 75 ou "Aluno reprovado por frequência", em caso contrário -->
+<span>Informar a nota:</span>
+<input id="input_informar_nota" type="number"> <br>
+<span>Informar Frequencia:</span>
+<input id="input_frequencia" type="number"> <br>
+<button onclick="analisar_aluno()">Analisar aluno</button>
+<div id="div_resultado"></div>
+</body>
+</html>
+
+<script>
+    function analisar_aluno(){
+        var nota = Number(input_informar_nota.value);
+        var frequencia = Number(input_frequencia.value)
+        if (input_informar_nota.value != "" && input_frequencia.value !=""){
+        nota = ""
+        frequencia = ""
+    }
+
+        if(nota <0 || nota >10){
+            alert ("Onde já se viu nota <0 ou >10?!")
+                div_resultado.innerHTML = ``
+        } else if (frequencia <0 || frequencia >100){
+            alert ("Onde já se viu frequência <0 ou >100?!")
+                div_resultado.innerHTML = ``
+        } else { 
+        if(nota >= 0 && nota <6){
+            div_resultado.innerHTML = `Aluno ficou abaixo da média`
+        } else if (nota >= 6 && nota <= 8){
+            div_resultado.innerHTML = `Aluno ficou da média`
+        } else{
+            div_resultado.innerHTML = `Aluno acima da média`
+        }}
+         if (frequencia >= 75){
+            div_resultado.innerHTML += `<br>Aluno aprovado  por frequência `
+        } else {
+            div_resultado.innerHTML += `<br>Aluno reprovado por frequência`
+        }
+    }
+</script>

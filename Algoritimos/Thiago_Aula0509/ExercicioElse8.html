@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <span>Informar quantas patidas um atacante jogou</span>
+    <input id="input_numero_partidas" type="number"> <br>
+    <span>informar quantos gols marcou</span>
+    <input id="input_gols" type="number">
+    <button onclick="estudar_atacante()">Estudar atacante</button>
+    <div id="div_resultado"></div>
+</body>
+</html>
+
+<script>
+    function estudar_atacante(){
+        var partidas_jogadas = Number(input_numero_partidas.value);
+        var gols = Number(input_gols.value);
+        var media_gols = gols / partidas_jogadas;
+
+        if (media_gols < 0.2 ){
+            div_resultado.innerHTML = ` Melhor mudar de posição
+            <br><img src = "https://conteudo.imguol.com.br/c/esporte/51/2022/07/24/yuri-alberto-em-acao-pelo-corinthians-na-partida-contra-o-atletico-mg-valida-pelo-campeonato-brasileiro-1658698660785_v2_3x4.jpg" width= "300px"> `
+        } 
+        else{
+            if (media_gols <= 0.6) {
+            div_resultado.innerHTML = ` Atacante mediano
+            <br><img src = "https://www.lance.com.br/files/article_main/uploads/2022/07/07/62c72a6c5f388.jpeg" width= "500px"> `
+        } else {   
+            div_resultado.innerHTML =
+            ` Atacante de futuro
+            <br><img src = "https://i0.statig.com.br/bancodeimagens/imgalta/a6/6t/24/a66t24zgj781j6rjaqna4w0w6.jpg" width= "300px"> `
+        }        } 
+
+        div_resultado.innerHTML += ` <br> Sua média de gols/partida é de <b>${media_gols.toFixed(1)}</b>`
+
+        
+    }
+</script>

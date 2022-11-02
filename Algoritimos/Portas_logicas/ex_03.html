@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- ) Solicite a temperatura do ambiente;
+b) Ao clicar em "Medir conforto", exiba um alert com uma dessas frases:
+    "Temperatura confortável", caso a temperatura esteja entre 22 e 23.
+    "Temperatura não está confortável", caso contrário. -->
+    <span>Informar a temperatura do ambiente:</span>
+    <input id="input_temperatura" type="number"> <br>
+    <button onclick="medir_conforto()">Medir conforto</button>
+</body>
+</html>
+
+<script>
+    function medir_conforto(){
+        var temperatura = Number(input_temperatura.value);
+        if (temperatura ==22  || temperatura ==23){
+            alert ("Temperatura confortável")
+        } else {
+            alert ("Temperatura não está confortável")
+        }
+    }
+</script>

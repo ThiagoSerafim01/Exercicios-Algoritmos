@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span>Informar  o tempo que deixou o arroz cozinhando:</span>
+    <input id="input_arroz_cozinhando" type="number"> <br>
+    <span> Um cozimento perfeito é de 5 minutos, exatamente</span> <br>
+    <button onclick="provar_arroz()">Provar arroz</button>
+    
+    <div id="div_resultado"></div> 
+</body>
+</html>
+
+<script>
+    function provar_arroz(){
+        var arroz = Number(input_arroz_cozinhando.value);
+
+
+        if (arroz == 5 ){
+            div_resultado.innerHTML = ` <br> Parabéns! Arroz perfeito!
+            <br><img src = "https://p2.trrsf.com/image/fget/cf/940/0/images.terra.com/2018/09/18/arroz-soltinho.jpg" alt= "imagem" width= "500px"> `
+        } else{
+            div_resultado.innerHTML = ` <br> Arroz cru ou cozido demais!
+            <br><img src = "https://uvn-brightspot.s3.amazonaws.com/assets/vixpt/a/arroz-papa-1020-1400x800.jpg" alt= "imagem" width= "500px"> `
+        }
+    }
+</script>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- a) Pergunte o modo de pagamento numa combo com as seguintes opções:
+    Dinheiro
+    Cartão de débito
+    Cartão de crédito
+    Boleto
+b) Ao clicar num botão "Analisar compra", exiba um alert com uma dessa mensagens:
+   "Você terá que pagar a vista", somente se o pagamento for dinheiro ou débito
+   "Pagamento poderá ser parcelado", se o pagamento for crédito ou boleto. -->
+
+        <span>Informar o modo de pagamento:</span>
+        <select id="pagamento">
+            <option value=""></option>
+            <option value="1">Dinheiro</option>
+            <option value="2">Cartão de débito</option>
+            <option value="3">Cartão de crédito</option>
+            <option value="4">Boleto</option>
+        </select>
+        <button onclick="analisar()">Analisar compra</button>
+</body>
+</html>
+
+<script>
+    function analisar(){
+        var modo_de_pag = pagamento.value;
+        if(modo_de_pag == 1 || modo_de_pag ==2){
+            alert ("Você terá que pagar a vista")
+        } else {
+            alert ("Pagamento poderá ser parcelado")
+        }
+    }
+</script>

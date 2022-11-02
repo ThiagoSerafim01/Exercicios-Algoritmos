@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- a) Solicite o valor da renda individual do usuário;
+b) Solicite o valor da renda familiar do usuário;
+c) Ao clicar em "Terei o benefício ?", podem aparecer as seguintes mensagens:
+
+"Você terá direito ao auxílio", caso renda individual for até 2000 ou caso a renda familiar for até 3000.
+
+"Sem direito ao auxílio", caso contrário. -->
+        <span>Informar renda individual:</span>
+        <input id="input_renda" type="number"> <br>
+
+        <span>Informar a renda familiar:</span>
+        <input id="input_renda_familiar" type="number"> <br>
+
+        <button onclick="beneficio()">Terei o benefício</button> <br>
+        <div id="div_resultado"></div>
+
+</body>
+</html>
+
+<script>
+    function beneficio(){
+        var renda_indi = Number(input_renda.value);
+        var renda_fami = Number(input_renda_familiar.value);
+
+        if(renda_indi <=2000 && renda_fami<=3000){
+            alert ("Você terá direito ao auxílio")
+            }else {
+                alert ("Sem direito ao auxílio")
+            }
+    }
+</script>

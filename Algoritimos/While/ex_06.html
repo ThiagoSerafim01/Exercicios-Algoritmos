@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span>Informar o nome da pessoa que ama</span>
+    <input id="input_nome" type="text"> <br>
+    <span>Informar o numero de vezes que ama essa pessoa</span>
+    <input id="input_numero" type="number">
+    <button onclick="expressar()">Expressar amor</button>
+    <div id="div_resultado"></div>
+</body>
+</html>
+
+<script>
+    function expressar(){
+        var nome = input_nome.value
+        var vezes = Number(input_numero.value)
+        var repedicao = 1
+        div_resultado.innerHTML = ``
+        while(repedicao <= vezes){
+            div_resultado.innerHTML += `${repedicao}. ${nome}, te amo! Cheiroso te amo, gostoso te amo! <br> ` 
+            repedicao += 1
+        }
+        
+    }
+</script>
